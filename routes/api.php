@@ -28,6 +28,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 
 
+// Route::get('/transactions/{search}', [TransactionsController::class, 'search']);
+
 Route::get('/transactions/{search}', [TransactionsController::class, 'search']);
 Route::get('/transactions', [TransactionsController::class, 'index']);
 Route::post('/transactions', [TransactionsController::class, 'store']);
