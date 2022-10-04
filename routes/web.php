@@ -16,3 +16,20 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/fibonanci', function () {
+    function generate_string() {
+        $permitted_chars = 'thinking';             
+        $input_length = strlen($permitted_chars);
+        $jml = strlen($permitted_chars);
+        $random_string = '';
+        for($i = 0; $i < $jml; $i++) {
+            $random_character = $permitted_chars[mt_rand(0, $input_length - 1)];
+            $random_string .= $random_character;
+        }
+     
+        print_r($random_string);
+        // return $random_string;
+    }
+    generate_string();
+      
+});
